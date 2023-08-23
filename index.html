@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website is made for foodies ">
+    <meta name="keywords" content="html,css,javascript,kfc website">
+    <meta namr="arthour" content="Ahmed Raza">
+    <title>KFC</title>
+    <link rel="icon" href="./images/kfc logo.png">
+    <!-- custom css -->
+    <link rel="stylesheet" href="kfc.css">
+    <!-- custom css -->
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <!-- bootstrap link -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome cdn -->
+    <!-- swiper js link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <!-- swiper js link -->
+</head>
+<body id="body" class="theme-color">
+    <header>
+        <nav class="main-navbar">
+            <div class="navbar-logo-start-links">
+                <div class="start-links">
+                    <button class="btn ms-0" onclick="showsidenav()" onc>
+                        <i class="fa-solid fa-bars-staggered fa-2x text-theme-color"></i>
+                    </button>
+                    </button>
+                    <a href="#" class="btn navbar-logo-button">
+                        <img src="./images/kfc-images.png" alt="">
+                    </a>
+                </div>
+                <div class="navbar-middle-buttons">
+                    <button class="btn btn-theme-color border border-2 border-danger px-4">
+                        <img src="./images/kfc delivery.png" alt="">
+                        <span class="text-theme-color">DELIVERY</span>
+                    </button>
+                    <button class="btn btn-theme-color ms-2 px-4">
+                        <img src="./images/kfc pickup bag.jpg" alt="">
+                        <span class="text-theme-color">PICKUP</span>
+                    </button>
+                </div>
+            </div>
+            <div class="navbar-login-button">
+                <a href="#">
+                    <img src="./images/kfc bucket.svg" alt="">
+                </a>
+                <button class="btn btn-danger">LOGIN</button>
+            </div>
+        </nav>     
+        <nav class="sidenav sidebar-theme-color" id="sidenav">
+            <div class="container">
+                <div class="sidenav-button">
+                    <button class="btn btn-danger">LOGIN</button>
+                </div>
+                <div class="day-night-togglebtn" id="day-night-togglebtn" onclick="changetheme()">
+                    <span class="text-theme-color">Night</span>
+                    <span class="text-theme-color">Day</span>
+                </div>
+                <div class="sidebar-links">
+                    <hr class="hr-theme-color ">
+                    <ul>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                <img src="./images/Store-Locator.jpg" alt="">
+                                Store-Locator
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                <img src="./images/Tracking-order.jpg" alt="">
+                                Track Order
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                <img src="./images/Explore-menu..jpg" alt="">
+                                Explore Menu
+                            </li>
+                        </a>
+                    </ul>
+                    <hr class="hr-theme-color ">
+                    <ul>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                About Us
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                Feedback
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                Terms & Condition
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                Privacy Policy
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                Contact Us
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                Mitao Bhook
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                Mitao Bhook - Scholarship
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="text-theme-color">
+                                Careers
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar-middle-buttons-onmobile">
+            <button class="btn btn-theme-color border border-2 border-danger">
+                <img src="./images/kfc delivery.png" alt="">
+                <span class="text-theme-color">DELIVERY</span>
+            </button>
+            <button class="btn btn-theme-color ms-2">
+                <img src="./images/kfc pickup bag.jpg" alt="">
+                <span class="text-theme-color">PICKUP</span>
+            </button>
+        </div>
+    </header> 
+    <div class="foroffsidebar off-sidebar" onclick="removesidenavclass()">
+        <section class="banner-section">
+            <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#banner-section-modal">
+                <img src="./images/banner-image.jpg" class="w-100" alt="">
+            </a>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="banner-section-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body banner-section-modal">
+                        <div class="banner-section-modal-top-style">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div> 
+                        <!-- continue on modal styling -->
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            <!-- banner section modal -->
+        </section>
+        <section class="order-button p-3">
+            <div class="row m-0">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-danger form-control">REORDER</button>
+                </div>
+                <div class="col-md-5">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="slider">
+            <div class="container">
+                <div class="slider-heading">
+                    <h3 class=" fw-bolder text-theme-color">Explore Menu</h3>
+                </div>
+                <div class="slider-items">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card card-theme-color">
+                                    <a href="#">
+                                        <img src="./images/card-image-1.png" alt="">
+                                        <h5 class="text-theme-color">Every-Day Value</h5>
+                                    </a>
+                                    <div class="card-rounde-shape"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-theme-color">
+                                    <a href="#">
+                                        <img src="./images/card-image-2.png" alt="">
+                                        <h5 class="text-theme-color">Ala-Carte & Combos</h5>
+                                    </a>
+                                    <div class="card-rounde-shape"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-theme-color">
+                                    <a href="#">
+                                        <img src="./images/card-image-3.png" alt="">
+                                        <h5 class="text-theme-color">Signature Boxes</h5>
+                                    </a>
+                                    <div class="card-rounde-shape"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-theme-color">
+                                    <a href="#">
+                                        <img src="./images/card-image-4.png" alt="">
+                                        <h5 class="text-theme-color">Sharing</h5>
+                                    </a>
+                                    <div class="card-rounde-shape"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-theme-color">
+                                    <a href="#">
+                                        <img src="./images/card-image-5.png" alt="">
+                                        <h5 class="text-theme-color">Snacks & Beverages</h5>
+                                    </a>
+                                    <div class="card-rounde-shape"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-theme-color">
+                                    <a href="#">
+                                        <img src="./images/card-image-6.png" alt="">
+                                        <h5 class="text-theme-color">Midnight Snacks</h5>
+                                    </a>
+                                    <div class="card-rounde-shape"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"><i class="fa-solid fa-arrow-right fa-1x"></i></div>
+                        <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left fa-1x"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="best-seller">
+            <div class="container">
+                <div class="best-seller-content">
+                    <div class="best-seller-heading">
+                        <h3 class=" fw-bolder text-theme-color">Best Sellers</h3>
+                    </div>
+                    <div class="best-seller-cards">
+                        <div class="best-seller-card card-theme-color">
+                            <a href="#">
+                                    <div class="best-seller-card-header">
+                                        <div class="best-seller-card-top-style">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <h2 class="text-theme-color best-seller-card-text">card text</h2>
+                                        <span class="best-seller-ribbon">
+                                            <span class="best-seller-ribbon-para">
+                                                <h6>Rs</h6>
+                                                <h6>610</h6> 
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="best-seller-card-body">
+                                        <div class="best-seller-card-img-1"></div>
+                                    </div>  
+                            </a>
+                        </div>
+                        <div class="best-seller-card card-theme-color">
+                            <a href="#">
+                                <div class="best-seller-card-header">
+                                    <div class="best-seller-card-top-style">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <h2 class="text-theme-color best-seller-card-text">card text</h2>
+                                    <span class="best-seller-ribbon">
+                                        <span class="best-seller-ribbon-para">
+                                            <h6>Rs</h6>
+                                            <h6>610</h6> 
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="best-seller-card-body">
+                                <div class="best-seller-card-img-2"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="best-seller-card card-theme-color">
+                            <a href="#">
+                                <div class="best-seller-card-header">
+                                    <div class="best-seller-card-top-style">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <h2 class="text-theme-color best-seller-card-text">card text</h2>
+                                    <span class="best-seller-ribbon">
+                                        <span class="best-seller-ribbon-para">
+                                            <h6>Rs</h6>
+                                            <h6>610</h6> 
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="best-seller-card-body">
+                                    <div class="best-seller-card-img-3"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="best-seller-card card-theme-color">
+                            <a href="#">
+                                <div class="best-seller-card-header">
+                                    <div class="best-seller-card-top-style">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <h2 class="text-theme-color best-seller-card-text">card text</h2>
+                                    <span class="best-seller-ribbon">
+                                        <span class="best-seller-ribbon-para">
+                                            <h6>Rs</h6>
+                                            <h6>610</h6> 
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="best-seller-card-body">
+                                <div class="best-seller-card-img-4"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="top-deals">
+            <div class="container">
+                <div class="top-deals-content">
+                    <div class="top-deals-heading">
+                        <h3 class="fw-bolder text-theme-color">Top Deals</h3>
+                    </div>
+                    <div class="top-deals-cards">
+                        <div class="top-deals-card card-theme-color">
+                            <a href="#">
+                                <div class="top-deals-card-header">
+                                    <div class="top-deals-card-top-style">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="top-deals-card-image">
+                                        <img src="./images/twister-combo.png" alt="">
+                                    </div>
+                                </div>
+                                <button class="btn top-deals-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="top-deals-card-body">
+                                    <h6 class="text-theme-color top-deals-card-text">Twister Combo</h6>
+                                    <p class="top-deals-card-para text-theme-color">Twister+ 1 Regular fries+ 1 Regular drink</p>
+                                    <span class="top-deals-card-rs text-theme-color"><strong>RS 670</strong> </span>
+                                </div>
+                            </a>
+                            <div class="top-deals-button">
+                                <button class="btn top-deals-card-btn"><i class="fa-solid fa-plus"></i> ADD TO BUCKET</button>
+                            </div>
+                        </div>
+                        <div class="top-deals-card card-theme-color">
+                            <a href="#">
+                                <div class="top-deals-card-header">
+                                    <div class="top-deals-card-top-style">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="top-deals-card-image">
+                                        <img src="./images/zinger-stack.png" alt="">
+                                    </div>
+                                </div>
+                                <button class="btn top-deals-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="top-deals-card-body">
+                                    <h6 class="text-theme-color top-deals-card-text">Twister Combo</h6>
+                                    <p class="top-deals-card-para text-theme-color">Twister+ 1 Regular fries+ 1 Regular drink</p>
+                                    <span class="top-deals-card-rs text-theme-color"><strong>RS 670</strong> </span>
+                                </div>
+                            </a>
+                            <div class="top-deals-button">
+                                <button class="btn top-deals-card-btn"><i class="fa-solid fa-plus"></i> ADD TO BUCKET</button>
+                            </div>
+                        </div>
+                        <div class="top-deals-card card-theme-color">
+                            <a href="#">
+                                <div class="top-deals-card-header">
+                                    <div class="top-deals-card-top-style">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="top-deals-card-image">
+                                        <img src="./images/crispybox.png" alt="">
+                                    </div>
+                                </div>
+                                <button class="btn top-deals-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="top-deals-card-body">
+                                    <h6 class="text-theme-color top-deals-card-text">Twister Combo</h6>
+                                    <p class="top-deals-card-para text-theme-color">Twister+ 1 Regular fries+ 1 Regular drink</p>
+                                    <span class="top-deals-card-rs text-theme-color"><strong>RS 670</strong> </span>
+                                </div>
+                            </a>
+                            <div class="top-deals-button">
+                                <button class="btn top-deals-card-btn"><i class="fa-solid fa-plus"></i> ADD TO BUCKET</button>
+                            </div>
+                        </div>
+                        <div class="top-deals-card card-theme-color">
+                            <a href="#">
+                                <div class="top-deals-card-header">
+                                    <div class="top-deals-card-top-style">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="top-deals-card-image">
+                                        <img src="./images/family festival.png" alt="">
+                                    </div>
+                                </div>
+                                <button class="btn top-deals-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="top-deals-card-body">
+                                    <h6 class="text-theme-color top-deals-card-text">Twister Combo</h6>
+                                    <p class="top-deals-card-para text-theme-color">Twister+ 1 Regular fries+ 1 Regular drink</p>
+                                    <span class="top-deals-card-rs text-theme-color"><strong>RS 670</strong> </span>
+                                </div>
+                            </a>
+                            <div class="top-deals-button">
+                                <button class="btn top-deals-card-btn"><i class="fa-solid fa-plus"></i> ADD TO BUCKET</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="image-links">
+            <div class="container mt-5">
+                <div class="row mt-3">
+                    <div class="mt-2 col-md-6">
+                        <div class="image-links-img">
+                            <a href="#">
+                                <img src="./images/pickup-banner.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-2 col-md-6">
+                        <div class="image-links-img">
+                            <a href="#">
+                                <img src="./images/favorites-banner..png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="mt-2 col-md-6">
+                        <div class="image-links-img">
+                            <a href="#">
+                                <img src="./images/download-image.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-2 col-md-6">
+                        <div class="explore-menu card-theme-color">
+                            <img src="./images/kfc-meal.a" alt="">
+                            <h5 class="text-theme-color">Adding 11 herbs and spices, Explore our menu and add items to your cart.</h5>
+                            <button class="btn btn-danger">Explore Menu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="social-links">
+                    <img src="./images/kfc-images.png" alt="">
+                    <div class="links">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row kfc-links">
+                    <div class="col-md-3">
+                        <ul>
+                            <li>
+                                <a href="#" class="text-theme-color">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-theme-color">Mitao Bhook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-theme-color">Mitao Bhook - Scholarship</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-theme-color">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-theme-color">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li>
+                                <a href="#" class="text-theme-color">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-theme-color">Store Locator</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-theme-color">Track Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li>
+                                <a href="#" class="text-theme-color">Terms & Condition</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stores-links">
+                            <a href="https://apps.apple.com/us/app/kfc-pakistan/id1480491422" target="_blank">
+                                <img src="./images/applestore.png" alt="">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=io.bramerz.kfc&hl=en&gl=US" target="_blank">
+                                <img src="./images/playstore.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <span class="text-theme-color">2023 Ahmed Raza All Rights Reserved</span>
+                            <div>
+                                <span class="text-theme-color">Powerd by</span>
+                                <a href="#" class="">Ahmed Raza</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    function removesidenavclass(){
+        document.getElementById("sidenav").classList.remove("showsidenav")
+    }
+    function showsidenav(){
+        document.getElementById("sidenav").classList.toggle("showsidenav")
+    }
+    function changetheme(){
+        document.getElementById("day-night-togglebtn").classList.toggle("change")
+        document.getElementById("body").classList.toggle("change")
+    }
+</script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      480: {
+        slidesPerView: 2,
+      },
+      786 : {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 5,
+      },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+<!-- bootstrap js link -->
+    <script src="./bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<!-- bootstrap js link -->
+</html>
